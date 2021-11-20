@@ -6,7 +6,7 @@ namespace DataStructures
 {
     class LinkedList
     {
-        internal Node head;//internal used for onlt this project
+        internal Node head;
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -23,7 +23,7 @@ namespace DataStructures
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into linked list", node.data);
+            Console.WriteLine("{0} Inserted into Linked List", node.data);
         }
     }
 }

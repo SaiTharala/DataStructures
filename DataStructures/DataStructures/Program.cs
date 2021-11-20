@@ -6,10 +6,10 @@ namespace DataStructures
     {
         static void Main(string[] args)
         {
-            LinkedList list = new LinkedList();
-            list.Add(56);
-            list.Add(30);
-            list.Add(70);
-        } 
+            LinkedList ln = new LinkedList();
+            ln.Add(56);
+            ln.Add(30);
+            ln.Add(70);
+        }
     }
 }
