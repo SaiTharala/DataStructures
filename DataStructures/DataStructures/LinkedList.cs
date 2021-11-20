@@ -7,7 +7,7 @@ namespace DataStructures
     class LinkedList
     {
         internal Node head;
-        internal void Add(int data) // This Method Addind Data into the List
+        internal void Add(int data)
         {
             Node node = new Node(data);
             if (this.head == null)
@@ -23,47 +23,36 @@ namespace DataStructures
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} Inserted into Linked List", node.data);
+            Console.WriteLine("{0} is inserted into the linked list", node.data);
         }
-        internal void Display() // This Method Showing the Data in the List
+        internal void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
+        }
+        internal void Display()
         {
             Node temp = this.head;
             if (temp == null)
             {
-                Console.WriteLine("Linked List is Empty");
+                Console.WriteLine("LinkedList is empty");
                 return;
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + " ");
                 temp = temp.next;
             }
-        }
-        internal Node InsertAtParticularPosition(int position, int data) // This Method Will Insert Data on Given Position
-        {
-            Node newestNode = new Node(data);
-            if (this.head == null)
-            {
-                return newestNode;
-            }
-            if (position == 0)
-            {
-                newestNode.next = this.head;
-                this.head = newestNode;
-                return this.head;
-            }
-            Node prev = null;
-            Node current = this.head;
-            int count = 0;
-            while (current != null && count < position)
-            {
-                prev = current;
-                current = current.next;
-                count++;
-            }
-            newestNode.next = prev.next;
-            prev.next = newestNode;
-            return this.head;
+            Console.WriteLine();
         }
     }
 }
