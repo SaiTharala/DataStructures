@@ -11,7 +11,7 @@ namespace DataStructures
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Remove First node \n 5. Exit");
+                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Remove First node \n 5. Remove Last Node \n 6. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -41,6 +41,14 @@ namespace DataStructures
                         linkedList.Display();
                         break;
                     case 5:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.RemoveLastNode();
+                        Console.WriteLine("After removing the last node of Linked List : ");
+                        linkedList.Display();
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
