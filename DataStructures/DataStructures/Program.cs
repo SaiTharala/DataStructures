@@ -7,11 +7,13 @@ namespace DataStructures
             static void Main(string[] args)
         {
             LinkedList linkedList = new LinkedList();
-            Console.WriteLine("Welcome to Data Structures Programs");
+            ListStack stack = new ListStack();
+            ListQueue queue = new ListQueue();
+            Console.WriteLine("Welcome to Data Structures Programs...");
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Enter the Program to be executed : \n 1. Create Simple Linked List \n 2. Add in Reverse Order \n 3. Insert at Particular Position \n 4. Remove First node \n 5. Remove Last Node \n 6. Exit");
+                Console.WriteLine("\nChoose an Option : \n 1.Create Simple Linked List \n 2.AddInReverse\n 3.InsertBetween\n 4.RemoveFirstElement\n 5.RemoveLastElement\n 6.Search\n 7.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -29,7 +31,7 @@ namespace DataStructures
                     case 3:
                         linkedList.Add(56);
                         linkedList.Add(70);
-                        linkedList.InsertAtParticularPosition(1, 30);
+                        linkedList.InsertAtParticularPosition(2, 99);
                         linkedList.Display();
                         break;
                     case 4:
@@ -49,6 +51,13 @@ namespace DataStructures
                         linkedList.Display();
                         break;
                     case 6:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        int search = linkedList.Search(30);
+                        Console.WriteLine("\n{0} is The position Of Entered Element\n", search);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }

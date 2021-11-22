@@ -23,7 +23,7 @@ namespace DataStructures
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} is inserted into the linked list", node.data);
+            Console.WriteLine("{0} Inserted into linked list", node.data);
         }
         internal void AddInReverseOrder(int data)
         {
@@ -106,6 +106,22 @@ namespace DataStructures
             }
             NewNode.next = null;
             return head;
+        }
+        internal int Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
         }
     }
 }
