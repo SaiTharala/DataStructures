@@ -22,7 +22,7 @@ namespace DataStructures
                     temp = temp.next;
                 }
                 temp.next = node;
-                Console.WriteLine("{0} inserted into Queue\n", node.data);
+                Console.WriteLine("{0} inserted into Queue", node.data);
             }
         }
         internal void Display()
