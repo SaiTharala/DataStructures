@@ -13,7 +13,7 @@ namespace DataStructures
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nChoose an Option : \n 1.Create Simple Linked List \n 2.AddInReverse\n 3.InsertBetween\n 4.RemoveFirstElement\n 5.RemoveLastElement\n 6.Search\n 7.InsertAtParticularNode\n 8.DeleteAtParticularNode\n 9.Exit\n");
+                Console.WriteLine("\nChoose an Option : \n 1.Create Simple Linked List \n 2.AddInReverse\n 3.InsertBetween\n 4.RemoveFirstElement\n 5.RemoveLastElement\n 6.Search\n 7.InsertAtParticularNode\n 8.DeleteAtParticularNode\n 9.stackPush\n 10.stackPop\n 11.Exit\n");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -76,6 +76,19 @@ namespace DataStructures
                         linkedList.Display();
                         break;
                     case 9:
+                        stack.Push(70);
+                        stack.Push(30);
+                        stack.Push(56);
+                        stack.Display();
+                        break;
+                    case 10:
+                        stack.Push(70);
+                        stack.Push(30);
+                        stack.Push(56);
+                        stack.IsEmpty();
+                        stack.Display();
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
